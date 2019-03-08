@@ -1,0 +1,15 @@
+[Unit]
+Description=Gunicorn instance to serve slashme
+After=network.target
+
+[Service]
+User=slashme
+Group=slashme
+WorkingDirectory=/opt/slashme
+Environment="PATH=/opt/slashme/env/bin"
+Environment="SETTINGS=/opt/slashme/.settings.yaml"
+Environment="FLASK_APP=/opt/slashme/slashme/slashme.py"
+ExecStart=/opt/slashme/env/bin/gunicorn --workers 3 slashme.slashme:app
+
+[Install]
+WantedBy=multi-user.target
