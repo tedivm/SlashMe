@@ -1,4 +1,4 @@
-from badthings import app
+from slashme import app
 from flask import request, url_for
 from slackclient import SlackClient
 

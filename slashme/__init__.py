@@ -11,4 +11,4 @@ if 'SETTINGS' in os.environ:
     else:
         print('Unable to open settings file %s' % (os.environ['SETTINGS']))
 
-import badthings.badthings
+import slashme.slashme

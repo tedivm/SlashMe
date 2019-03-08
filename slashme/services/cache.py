@@ -1,8 +1,8 @@
 from beaker.cache import CacheManager
 from beaker.util import parse_cache_config_options
-from badthings import app
+from slashme import app
 
-cache_root = app.config['general'].get('filecache', '/tmp/badthings')
+cache_root = app.config['general'].get('filecache', '/tmp/slashme')
 
 cache_opts = {
     'cache.type': 'file',

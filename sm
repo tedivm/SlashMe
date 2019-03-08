@@ -9,6 +9,6 @@ else
 fi
 
 source $DIR/env/bin/activate
-export FLASK_APP=$DIR/badthings/badthings.py
+export FLASK_APP=$DIR/slashme/slashme.py
 
 flask "$@"

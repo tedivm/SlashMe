@@ -1,13 +1,14 @@
-import click
 from flask import Flask, jsonify, request
-from badthings import app
-from badthings.services import tweets
+from slashme import app
 
 @app.route('/slash/single', methods = ['GET', 'POST'])
 def slash_single():
-    scenario = tweets.get_random_tweet()
+    username = request.form['user_name']
+    text = request.form['text']
+    formatted message = '@%s: _%s_' % (username, text)
+
     response = {
         'response_type': 'in_channel',
-        'text': scenario
+        'text': formatted
     }
     return jsonify(response)

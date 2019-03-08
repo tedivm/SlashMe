@@ -1,5 +1,5 @@
-from badthings import app
-from badthings.services import slack
+from slashme import app
+from slashme.services import slack
 from flask import redirect, render_template, request, url_for
 from slackclient import SlackClient
 
