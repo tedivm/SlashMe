@@ -5,10 +5,10 @@ from slashme import app
 def slash_single():
     username = request.form['user_name']
     text = request.form['text']
-    formatted message = '@%s: _%s_' % (username, text)
+    formatted_message = '@%s: _%s_' % (username, text)
 
     response = {
         'response_type': 'in_channel',
-        'text': formatted
+        'text': formatted_message
     }
     return jsonify(response)
