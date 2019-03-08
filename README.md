@@ -1,1 +1,1 @@
-# BadThingsDailyBot
+# SlashMe
